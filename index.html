@@ -1,0 +1,1815 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>抖音小唧</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Microsoft YaHei",sans-serif;
+}
+
+body{
+    background:#0d0d0d;
+    color:white;
+}
+
+
+/* 顶部导航 */
+
+header{
+
+    background:#171717;
+    padding:20px 40px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    position:sticky;
+    top:0;
+
+    z-index:10;
+
+}
+
+
+.logo{
+
+    font-size:32px;
+    font-weight:bold;
+    color:#00ff66;
+
+}
+
+
+nav a{
+
+    color:white;
+    text-decoration:none;
+    margin-left:25px;
+
+}
+
+
+nav a:hover{
+
+    color:#00ff66;
+
+}
+
+
+
+/* 首页大图 */
+
+.banner{
+
+    height:450px;
+
+    background:
+    linear-gradient(
+    rgba(0,0,0,.5),
+    rgba(0,0,0,.8)
+    ),
+    url("https://images.unsplash.com/photo-1550745165-9bc0b252726f");
+
+    background-size:cover;
+    background-position:center;
+
+    display:flex;
+
+    justify-content:center;
+    align-items:center;
+
+    flex-direction:column;
+
+}
+
+
+.banner h1{
+
+    font-size:60px;
+
+}
+
+
+.banner p{
+
+    margin-top:20px;
+    color:#ddd;
+    font-size:20px;
+
+}
+
+
+/* 搜索抖音小唧 */
+
+.search{
+
+    margin-top:30px;
+
+}
+
+
+.search input{
+
+    width:350px;
+    padding:14px;
+
+    border:none;
+
+    border-radius:10px;
+
+}
+
+
+.search button{
+
+    padding:14px 25px;
+
+    background:#00ff66;
+
+    border:none;
+
+    border-radius:10px;
+
+    cursor:pointer;
+
+    font-weight:bold;
+
+}
+
+
+
+/* 内容 */
+
+.container{
+
+    width:1200px;
+
+    max-width:90%;
+
+    margin:40px auto;
+
+}
+
+
+.title{
+
+    font-size:30px;
+
+    color:#00ff66;
+
+    margin-bottom:20px;
+
+}
+
+
+
+/* 游戏卡片 */
+
+.games{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(250px,1fr));
+
+    gap:25px;
+
+}
+
+
+
+.card{
+
+    background:#1c1c1c;
+
+    border-radius:15px;
+
+    overflow:hidden;
+
+    transition:.3s;
+
+}
+
+
+.card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 0 20px #00ff66;
+
+}
+
+
+.card img{
+
+    width:100%;
+
+    height:250px;
+
+    object-fit:cover;
+
+}
+
+
+.card h3{
+
+    padding:15px;
+
+}
+
+
+.card p{
+
+    padding:0 15px 15px;
+
+    color:#aaa;
+
+}
+
+
+.card button{
+
+    margin:15px;
+
+    width:90%;
+
+    padding:12px;
+
+    border:none;
+
+    background:#00ff66;
+
+    border-radius:10px;
+
+    cursor:pointer;
+
+}
+
+
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<header>
+
+<div class="logo">
+GTAV免费网 <span style="color:#00ccff;"></span></p>
+</div>
+
+
+<nav>
+
+<a href="#home">首页</a>
+
+<a href="#gta">GTA专区</a>
+
+<a href="#mod">Mod专区</a>
+
+<p style="color:#ffaa00;">GTA5 MOD详情教程</p>
+<p>想要学习GTA5模组安装，可以去抖音搜索：<span style="color:#00ccff;">DY小唧</span></p>
+<p style="color:#ff4444;">⚠️提示：安装MOD前务必备好ScriptHookV、OpenIV等前置工具，避免游戏闪退！</p>
+
+
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>MOD教程</title>
+<style>
+/* 按钮样式 彩色 */
+#modBtn{
+    background:#ff7700;
+    color:white;
+    border:none;
+    padding:12px 24px;
+    font-size:18px;
+    border-radius:8px;
+    cursor:pointer;
+}
+#modBtn:hover{
+    background:#ff4400;
+}
+/* 教程区域 默认隐藏，点击按钮才显示 */
+#modContent{
+    display:none;
+    margin-top:20px;
+    line-height:1.8;
+    font-size:16px;
+}
+body{
+    background:#222222;
+    color:#fff;
+    padding:20px;
+}
+</style>
+</head>
+<body>
+
+<!-- 彩色按钮 -->
+<button id="modBtn">MOD教程</button>
+
+<!-- 教程内容，彩色文字 -->
+<div id="modContent">
+    <h2 style="color:#ffcc00;">GTA5模组完整安装教程</h2>
+    <p style="color:#44ddff;">📌学习更多可以抖音搜索：<span style="color:#ff9900;">DY小唧</span></p>
+
+    <h3 style="color:#55ff99;">🔴必备前置工具</h3>
+    <p style="color:#ffffff;">1. <span style="color:#ff5555;">ScriptHookV，防崩溃包，全部前置，上线补丁</span>：脚本模组必需，直接放到游戏根目录</p>
+    <p style="color:#ffffff;">2. OpenIV：安装OIV、载具模组，记得打开编辑模式</p>
+    <p style="color:#ffffff;">3. ScriptHookVDotNet：支持C#脚本模组</p>
+
+    <h3 style="color:#55ff99;">🟡Add‑on载具模组安装</h3>
+    <p style="color:#ffffff;">1. 想要的模组拖进根目录mods/update/x64/dlc</p>
+    <p style="color:#ffffff;">1. OpenIV开启编辑模式</p>
+    <p style="color:#ffffff;">2. 路径：update/update.rpf/跳红点左/com/data/dlc</p>
+    <p style="color:#ffffff;">3. 把模组dlc文件夹名字粘贴进去</p>
+    <p style="color:#ffffff;">4. 修改dlclist.xml添加对应条目</p>
+    <p style="color:#ffffff;">5. 进游戏用修改器【最好NT修改器】刷出车辆</p>
+
+    <h3 style="color:#55ff99;">🟢脚本MOD安装</h3>
+    <p style="color:#ffffff;">脚本文件(.sc)放到游戏目录 scripts 文件夹《详情看mod作者教程》</p>
+
+    <p style="color:#ff4444;">⚠️重要提醒：安装模组前建议备份原游戏文件，防止闪退损坏游戏！</p>
+</div>
+
+<script>
+//点击按钮显示/隐藏教程
+const btn = document.getElementById("modBtn");
+const box = document.getElementById("modContent");
+btn.onclick = function(){
+    if(box.style.display === "none"){
+        box.style.display = "block";
+        btn.innerText = "关闭MOD教程";
+    }else{
+        box.style.display = "none";
+        btn.innerText = "MOD教程";
+    }
+}
+</script>
+
+</body>
+</html>
+
+</nav>
+
+
+</header>
+
+
+
+<section class="banner" id="home">
+
+
+<h1>抖音小唧制作 DY小唧<span style="color:#ff9900;">DY小唧</span></p>
+</h1>
+
+<p>
+GTA游戏资料 · Mod整合介绍 · 玩家资源站
+</p>
+
+
+<div class="search">
+
+<input placeholder="搜索游戏">
+
+<button>
+搜索
+</button>
+
+</div>
+
+
+</section>
+
+
+
+<div class="container">
+
+
+<h2 class="title">
+热门游戏
+</h2>
+
+
+
+<div class="games">
+
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1542751110-97427bbecf20">
+
+<h3>
+GTAV全资源，来源为抖音不挑食的老杨
+</h3>
+
+<p>
+洛圣都开放世界冒险
+</p>
+
+
+<button>
+进入专区
+</p>
+
+<a href="https://pan.baidu.com/s/1TTTc6AEcqml14KOdkFsP9w" target="_blank">
+
+<button>
+百度网盘
+</button>
+
+</a>
+
+</div>
+</button>
+
+</div>
+
+
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1511512578047-dfb367046420">
+
+<h3>
+荒野大镖客2
+</h3>
+</p>
+
+<a href="https://pan.quark.cn/s/c56146322a73" target="_blank">
+
+<button>
+夸克网盘
+</button>
+
+</a>
+
+</div>
+</button>
+
+</div>
+
+
+
+<div class="card">
+
+
+<p>
+西部开放世界游戏
+</p>
+
+<button>
+查看介绍
+</button>
+
+</div>
+
+
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1493711662062-fa541adb3fc8">
+
+<h3>
+赛博朋克2077
+</h3>
+</p>
+
+<a href="https://pan.quark.cn/s/fe9b25ef8d6b" target="_blank">
+
+<button>
+夸克网盘
+</button>
+
+</a>
+
+</div>
+</button>
+
+</div>
+
+
+
+<div class="card">
+
+<p>
+未来都市RPG
+</p>
+
+<button>
+查看介绍
+</button>
+
+</div>
+
+
+</div>
+
+
+</div>
+<div class="container">
+
+<h2 class="title">
+资源专区
+</h2>
+
+
+<div class="games">
+
+
+<div class="card">
+
+<h3>
+怀旧经典单机
+</h3>
+
+<p>
+夸克网盘资源入口
+</p>
+
+<a href="https://pan.quark.cn/s/e15f9c2e8b04" target="_blank">
+
+<button>
+打开夸克网盘
+</button>
+
+</a>
+
+</div>
+
+
+<div class="card">
+
+<h3>
+其他资源
+</h3>
+
+<p>
+后续可以添加更多 Mod、补丁、教程
+</p>
+
+<button>
+敬请期待
+</button>
+
+</div>
+
+
+</div>
+
+</div><div class="container">
+
+<h2 class="title">
+资源专区
+</h2>
+
+
+<div class="games">
+
+
+<div class="card">
+
+<h3>
+怀旧经典单机
+</h3>
+
+<p>
+夸克网盘资源入口
+</p>
+
+<a href="https://pan.quark.cn/s/e15f9c2e8b04" target="_blank">
+
+<button>
+打开夸克网盘
+</button>
+
+</a>
+
+</div>
+
+
+<div class="card">
+星辰列车（297G 超英+特效车等mod，含热咖啡）
+</h3>
+
+<p>
+夸克网盘资源入口
+</p>
+
+<a href="我用夸克网盘给你分享了「星辰列车（297G 超英+特效车等mod，含热咖啡）」，点击链接或复制整段内容，打开「夸克APP」即可获取。
+/~9eea3aMiK9~:/
+链接：https://pan.quark.cn/s/e2034ee69c92">
+
+<button>
+打开夸克网盘
+</button>
+
+</a>
+
+</div>
+
+
+<div class="card">
+
+<h3>
+<h3>
+生化危机------系列
+</h3>
+
+<p>
+夸克网盘资源入口
+</p>
+
+<a href="https://pan.quark.cn/s/1961dbe3ed51">
+
+<button>
+打开夸克网盘
+</button>
+
+</a>
+
+</div>
+
+
+<div class="card">
+其他资源
+</h3>
+
+<p>
+后续可以添加更多 Mod、补丁、教程
+</p>
+
+<button>
+敬请期待
+</button>
+
+</div>
+qq 1071565157@qq.com
+
+</div>
+
+</div>
+<div class="container">
+
+<h2 class="title">
+资源专区
+</h2>
+
+
+<div class="games">
+
+
+<div class="card">
+
+<h3>
+🎮 怀旧经典单机
+</h3>
+
+<p>
+经典老游戏、合集、绿色版资源
+</p>
+
+<a href="https://pan.quark.cn/s/e15f9c2e8b04" target="_blank">
+
+<button>
+打开夸克网盘
+</button>
+
+</a>
+
+</div>
+
+
+
+<div class="card">
+
+<h3>
+gtavmod------系列
+</h3>
+
+<p>
+夸克网盘资源入口
+</p>
+
+<a href="https://pan.quark.cn/s/c279b8dacb14">
+
+<button>
+打开夸克网盘
+</button>
+
+</a>
+
+</div>
+
+
+<div class="card">
+
+<h3>
+📚 游戏教程
+</h3>
+
+<p>
+安装教程、运行问题解决、攻略资料
+</p>
+
+<button>
+敬请期待
+</button>
+
+</div>
+
+
+
+<div class="card">
+
+<h3>
+💾 软件工具
+</h3>
+
+<p>
+游戏辅助工具、实用软件合集
+</p>
+
+<button>
+即将开放
+</button>
+
+</div>
+
+
+
+<div class="card">
+
+<h3>
+🔥 热门推荐
+</h3>
+
+<p>
+精选资源，每周更新
+</p>
+
+<button>
+持续更新
+</button>
+
+</div>
+
+
+</div>hhh
+
+</div>gay
+<!-- 运行环境专区 -->
+
+<div class="card">
+
+<h3>
+🧩 游戏运行环境
+</h3>
+
+<p>
+解决游戏打不开、缺少DLL、启动报错等问题
+</p>
+
+<a href="https://learn.microsoft.com/zh-cn/cpp/windows/latest-supported-vc-redist" target="_blank">
+
+<button>
+微软 C++ 运行库
+</button>
+
+</a>
+
+
+<br><br>
+
+
+<a href="https://www.microsoft.com/zh-cn/download/details.aspx?id=35" target="_blank">
+
+<button>
+DirectX 运行库
+</button>
+
+</a>
+
+
+</div>
+
+
+
+<div class="card">
+
+<h3>
+⚙️ 微软系统组件
+</h3>
+
+<p>
+Windows 游戏常用组件安装
+</p>
+
+
+<a href="https://dotnet.microsoft.com/zh-cn/download" target="_blank">
+
+<button>
+.NET 官方下载
+</button>
+
+</a>
+
+
+</div>
+
+
+
+<div class="card">
+
+<h3>
+☕ Java 环境
+</h3>
+
+<p>
+Java 官方运行环境下载
+</p>
+
+
+<a href="https://www.java.com/zh-CN/download/" target="_blank">
+
+<button>
+Java 官网
+</button>
+
+</a>
+
+
+</div>
+
+
+
+<div class="card">
+
+<h3>
+📊 3DMark 性能测试
+</h3>
+
+<p>
+显卡、CPU、电脑性能测试工具
+</p>
+
+
+<a href="https://www.3dmark.com/" target="_blank">
+
+<button>
+3DMark 官网
+</button>
+
+</a>
+
+
+</div>
+
+
+
+<div class="card">
+
+<h3>
+🛠 游戏修复工具说明
+</h3>
+
+<p>
+常见问题：
+<br>
+缺少 DLL 文件
+<br>
+DirectX 报错
+<br>
+C++组件缺失
+<br>
+游戏无法启动
+</p>
+
+
+<button>
+查看教程
+</button>
+
+
+</div>倒卖司马
+<!-- 用户注册专区 -->
+
+<div class="card">
+
+<h3>
+👤 用户注册
+</h3>
+
+<p>
+注册账号后可以保存你的游戏资源收藏
+</p>
+
+
+<input 
+type="text" 
+id="username" 
+placeholder="输入用户名">
+
+
+<br><br>
+
+
+<input 
+type="password" 
+id="password" 
+placeholder="输入密码">
+
+
+<br><br>
+
+
+<input 
+type="password" 
+id="password2" 
+placeholder="再次输入密码">
+
+
+<br><br>
+
+
+<button onclick="register()">
+注册账号
+</button>
+
+
+<p id="msg"></p>
+
+
+</div>
+
+
+<script>
+
+function register(){
+
+let username =
+document.getElementById("username").value;
+
+
+let password =
+document.getElementById("password").value;
+
+
+let password2 =
+document.getElementById("password2").value;
+
+
+
+if(username==""){
+    
+document.getElementById("msg").innerHTML=
+"请输入用户名";
+
+return;
+
+}
+
+
+
+if(password==""){
+
+document.getElementById("msg").innerHTML=
+"请输入密码";
+
+return;
+
+}
+
+
+
+if(password!=password2){
+
+document.getElementById("msg").innerHTML=
+"两次密码不一致";
+
+return;
+
+}
+
+
+
+localStorage.setItem(
+"user",
+username
+);
+
+
+localStorage.setItem(
+"pass",
+password
+);
+
+
+
+document.getElementById("msg").innerHTML=
+"注册成功！";
+
+
+}
+
+</script>
+<!-- 免费公开游戏资源 -->
+
+<div class="card">
+
+<h3>
+🚩 红色警戒系列
+</h3>
+
+<p>
+经典即时战略，使用 OpenRA 重制版运行
+</p>
+
+<a href="https://www.openra.net/download/" target="_blank">
+
+<button>
+OpenRA 官方下载
+</button>
+
+</a>
+
+
+<p>
+教程：
+<br>
+1. 下载 OpenRA
+<br>
+2. 安装运行
+<br>
+3. 在游戏内选择 Red Alert 模组
+</p>
+
+</div>
+
+
+
+
+<div class="card">
+
+<h3>
+🧱 Minecraft 类沙盒
+</h3>
+
+<p>
+开源沙盒游戏替代方案
+</p>
+
+<a href="https://www.minetest.net/" target="_blank">
+
+<button>
+Minetest 官网
+</button>
+
+</a>
+
+
+<p>
+教程：
+<br>
+1. 安装游戏
+<br>
+2. 进入 Content 下载地图和 Mod
+<br>
+3. 创建世界开始游戏
+</p>
+
+</div>
+
+
+
+
+<div class="card">
+
+<h3>
+🏰 OpenTTD
+</h3>
+
+<p>
+经典运输经营模拟游戏
+</p>
+
+<a href="https://www.openttd.org/" target="_blank">
+
+<button>
+OpenTTD 官网
+</button>
+
+</a>
+
+
+<p>
+教程：
+<br>
+下载客户端
+<br>
+安装游戏数据
+<br>
+开始建设运输帝国
+</p>
+
+</div>
+
+
+
+
+<div class="card">
+
+<h3>
+⚔️ Battle for Wesnoth
+</h3>
+
+<p>
+免费回合制策略游戏
+</p>
+
+<a href="https://www.wesnoth.org/" target="_blank">
+
+<button>
+官网下载
+</button>
+
+</a>
+
+
+<p>
+教程：
+<br>
+下载安装
+<br>
+选择战役
+<br>
+学习兵种搭配
+</p>
+
+</div>
+
+
+
+
+<div class="card">
+
+<h3>
+🚀 Xonotic
+</h3>
+
+<p>
+免费多人 FPS 游戏
+</p>
+
+<a href="https://xonotic.org/" target="_blank">
+
+<button>
+官网下载
+</button>
+
+</a>
+
+
+<p>
+教程：
+<br>
+安装客户端
+<br>
+选择服务器
+<br>
+开始联机
+</p>
+
+</div>666
+<!-- Minecraft 启动器专区 -->
+
+
+<div class="card">
+
+<h3>
+⛏ PCL2 启动器
+</h3>
+
+<p>
+Plain Craft Launcher 2
+<br>
+支持版本管理、Mod安装、整合包管理
+</p>
+
+
+<a href="https://www.pcl2.com.cn/" target="_blank">
+
+<button>
+PCL2 官方入口
+</button>
+
+</a>
+
+
+<p>
+教程：
+<br>
+1. 下载 PCL2
+<br>
+2. 解压并打开 PCL.exe
+<br>
+3. 设置游戏目录
+<br>
+4. 安装 Forge / Fabric Mod
+</p>
+
+
+</div>
+
+
+
+
+<div class="card">
+
+<h3>
+🌈 HMCL 启动器
+</h3>
+
+<p>
+Hello Minecraft Launcher
+<br>
+支持 Windows、Linux、macOS
+</p>
+
+
+<a href="https://hmcl.huangyuhui.net/" target="_blank">
+
+<button>
+HMCL 官方入口
+</button>
+
+</a>
+
+
+<p>
+教程：
+<br>
+1. 安装 Java 环境
+<br>
+2. 打开 HMCL
+<br>
+3. 登录账号
+<br>
+4. 下载 Minecraft 版本
+<br>
+5. 添加 Mod 和整合包
+</p>
+
+
+</div>
+
+
+
+
+<div class="card">
+
+<h3>
+☕ Minecraft Java 环境
+</h3>
+
+<p>
+运行 PCL / HMCL 必备
+</p>
+
+
+<a href="https://www.java.com/" target="_blank">
+
+<button>
+Java 官网
+</button>
+
+</a>
+
+
+<p>
+教程：
+<br>
+安装 Java 后重启启动器
+<br>
+选择对应游戏版本即可
+</p>
+
+
+</div>
+<!-- GTA5 Mod 下载专区 -->
+
+<div class="card">
+
+<h3>🚗 GTA5 Mods</h3>
+
+<p>
+全球最大的 GTA5 Mod 下载网站
+<br>
+车辆、人物、地图、脚本应有尽有
+</p >
+
+<a href=" " target="_blank">
+<button>进入 GTA5-Mods</button>
+</a >
+
+</div>
+
+<div class="card">
+
+<h3>🛠 Script Hook V</h3>
+
+<p>
+运行大多数 GTA5 单机 Mod 必备
+</p >
+
+<a href="https://www.dev-c.com/gtav/scripthookv/" target="_blank">
+<button>官方下载</button>
+</a >
+
+</div>
+
+<div class="card">
+
+<h3>📂 OpenIV</h3>
+
+<p>
+安装车辆、地图、人物 Mod 的工具
+</p >
+
+<a href="https://openiv.com/" target="_blank">
+<button>OpenIV 官网</button>
+</a >
+
+</div>
+
+<div class="card">
+
+<h3>🚘 Real Cars Pack</h3>
+
+<p>
+各种真实汽车 Mod 下载
+</p >
+
+<a href="https://www.gta5-mods.com/vehicles" target="_blank">
+<button>车辆 Mod</button>
+</a >
+
+</div>
+
+<div class="card">
+
+<h3>👮 人物 Mod</h3>
+
+<p>
+人物皮肤、NPC、英雄角色
+</p >
+
+<a href="https://www.gta5-mods.com/player" target="_blank">
+<button>人物 Mod</button>
+</a >
+
+</div>
+
+<div class="card">
+
+<h3>🗺 地图 Mod</h3>
+
+<p>
+新增城市、建筑、地图
+</p >
+
+<a href="https://www.gta5-mods.com/maps" target="_blank">
+<button>地图 Mod</button>
+</a >
+
+</div>
+
+<div class="card">
+
+<h3>📜 脚本 Mod</h3>
+
+<p>
+LSPDFR、任务、功能增强等脚本
+</p >
+
+<a href="https://www.gta5-mods.com/scripts" target="_blank">
+<button>脚本 Mod</button>
+</a >
+
+</div>
+
+<div class="card">
+
+<h3>🎨 图形画质 Mod</h3>
+
+<p>
+ENB、NVE 等画质增强资源
+</p >
+
+<a href="https://www.gta5-mods.com/misc" target="_blank">
+<button>画质 Mod</button>
+</a >
+
+</div>
+<!-- 热门 GTA5 Mod 推荐 -->
+
+<div class="card">
+
+<h2>🔥 热门 GTA5 Mod 推荐</h2>
+
+<p>
+本站精选热门 GTA5 Mod
+<br>
+点击即可前往下载页面
+</p >
+
+</div>
+
+
+
+<div class="card">
+
+<h3>🚔 LSPDFR 警察模拟</h3>
+
+<p>
+体验成为洛圣都警察
+<br>
+执行巡逻、抓捕、追逐等任务
+</p >
+
+<a href=" " target="_blank">
+<button>
+立即下载
+</button>
+</a >
+
+</div>
+
+
+
+<div class="card">
+
+<h3>🚗 Menyoo Trainer</h3>
+
+<p>
+GTA5 最经典功能菜单
+<br>
+刷车、传送、天气、时间等功能
+</p >
+
+<a href="https://www.gta5-mods.com/scripts/menyoo-pc-sp" target="_blank">
+<button>
+立即下载
+</button>
+</a >
+
+</div>
+
+
+
+<div class="card">
+
+<h3>🚙 Simple Trainer</h3>
+
+<p>
+简单好用的 GTA5 修改器
+<br>
+适合新手玩家
+</p >
+
+<a href="https://www.gta5-mods.com/scripts/simple-trainer-for-gtav" target="_blank">
+<button>
+立即下载
+</button>
+</a >
+
+</div>
+
+
+
+<div class="card">
+
+<h3>🌆 NaturalVision Evolved（NVE）</h3>
+
+<p>
+超高画质 Mod
+<br>
+真实光影、天气、环境效果
+</p >
+
+<a href="https://www.razedmods.com/" target="_blank">
+<button>
+前往官网
+</button>
+</a >
+
+</div>
+
+
+
+<div class="card">
+
+<h3>🚘 Add-On Car Pack</h3>
+
+<p>
+大量真实车辆合集
+<br>
+持续更新车辆资源
+</p >
+
+<a href="https://www.gta5-mods.com/vehicles" target="_blank">
+<button>
+浏览车辆 Mod
+</button>
+</a >
+
+</div>
+
+
+
+<div class="card">
+
+<h3>🧟 Zombie Mod</h3>
+
+<p>
+开启 GTA5 僵尸末日模式
+<br>
+生存、探索、收集资源
+</p >
+
+<a href="https://www.gta5-mods.com/scripts/simple-zombies" target="_blank">
+<button>
+立即下载
+</button>
+</a >
+
+</div>
+
+
+
+<div class="card">
+
+<h3>🦸 Superman Mod</h3>
+
+<p>
+化身超人
+<br>
+飞行、激光眼、超级力量
+</p >
+
+<a href="https://www.gta5-mods.com/scripts/superman-v-script" target="_blank">
+<button>
+立即下载
+</button>
+</a >
+
+</div>
+
+
+
+<div class="card">
+
+<h3>🏎 Real Traffic</h3>
+
+<p>
+增强 GTA5 AI 交通
+<br>
+车辆更多、更真实
+</p >
+
+<a href="https://www.gta5-mods.com/" target="_blank">
+<button>
+查找相关 Mod
+</button>
+</a >
+
+</div>
+
+
+
+<div class="card">
+
+<h3>🚓 EUP 人物服装包</h3>
+
+<p>
+新增大量警察、消防、医疗等制服
+</p >
+
+<a href="https://www.lcpdfr.com/downloads/gta5mods/character/" target="_blank">
+<button>
+立即下载
+</button>
+</a >
+
+</div>
+
+
+
+<div class="card">
+
+<h3>🎯 GTA5 Mod 教程</h3>
+
+<p>
+不会安装？
+<br>
+这里提供详细安装教程
+</p >
+
+<a href="https://www.gta5-mods.com/" target="_blank">
+<button>
+查看教程
+</button>
+</a >
+
+</div>程mod
+<div class="card">
+
+<h2>⚠️ 法律声明</h2>
+
+<p>
+本站仅提供游戏资讯、教程、工具导航及资源索引，所有资源版权归其原作者或版权方所有。
+<br><br>
+
+本站不拥有、不修改任何第三方资源，仅供学习、交流与技术研究使用。
+<br><br>
+
+请用户遵守所在国家或地区的法律法规，并尊重相关版权及知识产权。
+<br><br>
+
+若本站内容涉及您的合法权益，请通过联系方式告知，我们将在核实后及时处理或删除相关内容。
+<br><br>
+
+继续浏览或下载本站提供的资源，即表示您已阅读并同意本声明。
+</p >
+
+</div>
+ <!-- GTA 游戏演示 -->
+
+<div class="card">
+
+<h2>📸 GTA 游戏演示</h2>
+
+
+
+</div>
+<!-- 免费游戏专区 -->
+
+<div class="card">
+
+<h2>🎮 免费游戏推荐</h2>
+
+<p>
+这里推荐一些官方免费或可免费领取的游戏。
+</p >
+
+</div>
+
+<div class="card">
+
+<h3>🚗 Trackmania</h3>
+
+<p>育碧官方免费竞速游戏。</p >
+
+<a href=" " target="_blank">
+<button>官方下载</button>
+</a >
+
+</div>
+
+<div class="card">
+
+<h3>⚔ Warframe</h3>
+
+<p>热门免费科幻动作游戏。</p >
+
+<a href="https://www.warframe.com/" target="_blank">
+<button>官方下载</button>
+</a >
+
+</div>
+
+<div class="card">
+
+<h3>🚀 Fortnite</h3>
+
+<p>Epic Games 免费多人游戏。</p >
+
+<a href="https://www.fortnite.com/" target="_blank">
+<button>官方下载</button>
+</a >
+
+</div>
+
+<div class="card">
+
+<h3>🎯 Valorant</h3>
+
+<p>Riot Games 免费 FPS 游戏。</p >
+
+<a href="https://playvalorant.com/" target="_blank">
+<button>官方下载</button>
+</a >
+
+</div>
+
+<div class="card">
+
+<h3>🚂 Honkai: Star Rail（崩坏：星穹铁道）</h3>
+
+<p>官方免费角色扮演游戏。</p >
+
+<a href="https://hsr.hoyoverse.com/" target="_blank">
+<button>官方下载</button>
+</a >
+
+</div>
+
+</div>
+
+
+<!-- 游戏列表尾部模块开始 -->
+<div class="game-list-footer">
+
+    <div class="game-card">
+        <span>🎮 荒野大镖客2</span>
+        <a href="我用夸克网盘给你分享了「荒野大镖客2」，点击链接或复制整段内容，打开「夸克APP」即可获取。
+/~e0fe3ZuAWV~:/
+链接：https://pan.quark.cn/s/67dbacb382ad" target="_blank">打开</a >
+    </div>
+
+    <div class="game-card">
+        <span>⚔️ 艾尔登法环</span>
+        <a href="https://pan.quark.cn/s/74286b6ab571" target="_blank">打开</a >
+    </div>
+
+    <div class="game-card">
+        <span>🧟 生化危机9：安魂曲DY小唧</span>
+        <a href="https://pan.quark.cn/s/bad67f3b6265" target="_blank">打开</a >
+    </div>
+
+    <div class="game-card">
+        <span>🐒 黑神话：悟空DY小唧</span>
+        <a href="https://pan.quark.cn/s/f4bdfdaff1bf
+我用夸克网盘给你分享了「8.0」，点击链接或复" target="_blank">打开</a >
+    </div>
+
+    <div class="game-card">
+        <span>🔥gtaV联机版 8.0</span>
+        <a href="https://pan.quark.cn/s/18f54ab7c679" target="_blank">打开</a >
+    </div>
+
+</div>
+
+<style>
+.game-list-footer {
+    width: 90%;
+    max-width: 900px;
+    margin: 40px auto;
+}
+
+.game-card {
+    background: rgba(20,20,20,.9);
+    color:#fff;
+    padding:18px;
+    margin:12px 0;
+    border-radius:12px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    box-shadow:0 0 15px rgba(255,0,0,.25);
+}
+
+.game-card span {
+    font-size:18px;
+    font-weight:bold;
+}
+
+.game-card a {
+    background:#e63946;
+    color:white;
+    padding:8px 20px;
+    border-radius:20px;
+    text-decoration:none;
+}
+
+.game-card a:hover {
+    background:#ff4d5a;
+}
+</style>
+<!-- 游戏列表尾部模块结束 -->
